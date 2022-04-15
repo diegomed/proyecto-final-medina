@@ -2,43 +2,23 @@ import logo from './logo.svg';
 import './App.css';
 
 import NavBar from './components/NavBar/NavBar';
+import Button from './components/Button';
+import Box from './components/Box';
 
 function App() {
-
-  // const arr = [1, 2, 3];
-
-  // const a = 4;
-
-  // const nuevoArr = [...arr, a, 5];
-
-  // console.log(nuevoArr);
-
-  // const comision = '12345';
-
-  // const profe = {
-  //   nombre: 'Diego',
-  //   apellido: 'Medina',
-  //   ['comision-' + comision]: 'todos unos genios'
-  // }
-
-  // console.log(profe);
-
-  // const { b: val } = { a: 3 }
-
-  // console.log(val);
-
-  // const [a = 1, b = 2, c = 3, d = 4] = [1, 2, 3];
-
-  // console.log(d);
-
-  // const a = 1;
-  // const b = 2;
-  // const c = 3;
-
-
   return (
     <div className="App">
       <NavBar />
+      <Button texto='Boton' color='red'/>
+      <Button texto='Boton2' color='blue'/>
+      <Button texto='Boton3' color='grey'/>
+      <Button texto='Boton4' color='brown'>
+        <p>Este es el children del boton 4</p>
+      </Button>
+      <Button color='green'>
+        <p>Esto es un children</p>
+      </Button>
+      <Box titulo='Caja contenedora' />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
