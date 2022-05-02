@@ -10,18 +10,21 @@ function getProducts() {
         id: 1,
         title: 'Batman',
         price: '$450',
+        stock: 5,
         imageUrl: 'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/184/069/products/batman80anivol191-5a4d6411b2ef55dd1315908772450482-480-0.jpg'
       },
       {
         id: 2,
         title: 'Superman',
         price: '$600',
+        stock: 5,
         imageUrl: 'https://www.ecccomics.com/content/productos/10036/Superman_109_30_1a_cubierta_CORR.jpg'
       },
       {
         id: 3,
         title: 'Flash',
         price: '$350',
+        stock: 5,
         imageUrl: 'https://www.ecccomics.com/content/productos/5447/Flash_28.jpg'
       }
     ];
@@ -44,6 +47,10 @@ function ItemListContainer({ greeting }) {
       .then(res => {
         setProducts(res);
       })
+      .catch(err => {
+        console.log(err);
+        alert('Ocurrio un error, revisar la consola!');
+      });
   }, []);
 
   return (
