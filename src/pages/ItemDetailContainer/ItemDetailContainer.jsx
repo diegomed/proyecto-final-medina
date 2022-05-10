@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ItemDetail from '../../components/ItemDetail/ItemDetail';
 import './ItemDetailContainer.css';
@@ -11,6 +11,7 @@ function getItem(id) {
                 title: 'Batman',
                 price: '$450',
                 stock: 5,
+                category: 'superheroes',
                 imageUrl: 'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/184/069/products/batman80anivol191-5a4d6411b2ef55dd1315908772450482-480-0.jpg'
             },
             {
@@ -18,6 +19,7 @@ function getItem(id) {
                 title: 'Superman',
                 price: '$600',
                 stock: 5,
+                category: 'superheroes',
                 imageUrl: 'https://www.ecccomics.com/content/productos/10036/Superman_109_30_1a_cubierta_CORR.jpg'
             },
             {
@@ -25,6 +27,7 @@ function getItem(id) {
                 title: 'Flash',
                 price: '$350',
                 stock: 5,
+                category: 'superheroes',
                 imageUrl: 'https://www.ecccomics.com/content/productos/5447/Flash_28.jpg'
             }
         ];

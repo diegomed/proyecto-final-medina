@@ -8,7 +8,7 @@ function NavBar(props) {
         <div className='nav-container'>
             <Link to='/'>
                 <img
-                    src='omg-logo.png'
+                    src={process.env.PUBLIC_URL + '/omg-logo.png'}
                     alt="OMG Comics"
                 />
             </Link>
