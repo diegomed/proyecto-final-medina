@@ -9,9 +9,9 @@ function ItemDetail({ item }) {
 
     const cartCtx = useContext(CartContext);
 
-    function addHandler(quantityToAdd) {
+    const addHandler = useCallback((quantityToAdd) => {
         cartCtx.addProduct({quantity: quantityToAdd, ...item});
-    }
+    }, []); // Retorna una version Memoizada de addHandler
 
     return (
     <div className='item-detail'>
@@ -25,7 +25,7 @@ function ItemDetail({ item }) {
                 <h2>{ item?.title }</h2>
                 <p>{ item?.price }</p>
                 <div className='count-container'>
-                    <ItemCount initial={0} stock={item.stock} onAdd={addHandler} array={useMemo(() => [1,2,3])}/>
+                    <ItemCount initial={0} stock={item.stock} onAdd={addHandler} />
 
                     <button onClick={() => console.log(cartCtx.products)} >Imprimir carrito</button>
 
@@ -51,4 +51,4 @@ function ItemDetail({ item }) {
     )
 }
 
-export default ItemDetail
+export default React.memo(ItemDetail)

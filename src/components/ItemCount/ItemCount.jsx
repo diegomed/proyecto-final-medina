@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './ItemCount.css';
 
-function ItemCount({ stock, initial, onAdd, array }) {
+function ItemCount({ stock, initial, onAdd }) {
     console.log('Se renderizo ItemCount');
 
     const [count, setCount] = useState(initial);

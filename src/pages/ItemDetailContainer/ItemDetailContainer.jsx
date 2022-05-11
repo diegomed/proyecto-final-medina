@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect, useMemo, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ItemDetail from '../../components/ItemDetail/ItemDetail';
 import './ItemDetailContainer.css';
@@ -40,6 +40,8 @@ function getItem(id) {
 }
 
 function ItemDetailContainer() {
+    console.log('Se renderizo ItemDetailContainer');
+
     const [item, setItem] = useState({});
     const { id } = useParams();
 
@@ -54,9 +56,11 @@ function ItemDetailContainer() {
             });
     }, [id]);
 
+    const memoizedItem = useMemo(() => item, [item]); // Retorna una version memoizada de item
+
     return (
         <div className='item-detail-container'>
-            <ItemDetail item={item} />
+            <ItemDetail item={memoizedItem} />
         </div>
     )
 }
