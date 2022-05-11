@@ -13,9 +13,9 @@ function NavBar(props) {
                 />
             </Link>
             <ul className='nav'>
-                <li><NavLink to='/category/accion' className={nav => nav.isActive ? 'nav-active' : ''}>Accion</NavLink></li>
-                <li><NavLink to='/category/drama' className={nav => nav.isActive ? 'nav-active' : ''}>Drama</NavLink></li>
-                <li><NavLink to='/category/superheroes' className={nav => nav.isActive ? 'nav-active' : ''}>Superheroes</NavLink></li>
+                <li><NavLink to='/item/1' className={nav => nav.isActive ? 'nav-active' : ''}>Batman</NavLink></li>
+                <li><NavLink to='/item/2' className={nav => nav.isActive ? 'nav-active' : ''}>Superman</NavLink></li>
+                <li><NavLink to='/item/3' className={nav => nav.isActive ? 'nav-active' : ''}>Flash</NavLink></li>
             </ul>
             <CartWidget/>
         </div>

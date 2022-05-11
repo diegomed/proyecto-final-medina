@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import './ItemCount.css';
 
-function ItemCount({ stock, initial, onAdd }) {
+function ItemCount({ stock, initial, onAdd, array }) {
+    console.log('Se renderizo ItemCount');
+
     const [count, setCount] = useState(initial);
 
     function handlePlusButton() {
@@ -28,4 +30,4 @@ function ItemCount({ stock, initial, onAdd }) {
     )
 }
 
-export default ItemCount
+export default React.memo(ItemCount);

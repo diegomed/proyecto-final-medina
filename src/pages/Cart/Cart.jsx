@@ -1,8 +1,12 @@
 import React from 'react'
+import TextInput from '../../components/TextInput/TextInput'
 
 function Cart() {
   return (
-    <div>Cart</div>
+    <>
+      <div>Cart</div>
+      <TextInput isTextarea={false} inputType='number' color='red' />
+    </>
   )
 }
 
