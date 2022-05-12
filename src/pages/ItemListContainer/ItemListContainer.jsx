@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-// import ItemCount from '../ItemCount/ItemCount';
 import ItemList from '../../components/ItemList/ItemList';
 import './ItemListContainer.css'
 
@@ -10,7 +9,7 @@ function getProducts(category) {
       {
         id: 1,
         title: 'Batman',
-        price: '$450',
+        price: 450,
         stock: 5,
         category: 'superheroes',
         imageUrl: 'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/184/069/products/batman80anivol191-5a4d6411b2ef55dd1315908772450482-480-0.jpg'
@@ -18,7 +17,7 @@ function getProducts(category) {
       {
         id: 2,
         title: 'Superman',
-        price: '$600',
+        price: 600,
         stock: 5,
         category: 'superheroes',
         imageUrl: 'https://www.ecccomics.com/content/productos/10036/Superman_109_30_1a_cubierta_CORR.jpg'
@@ -26,7 +25,7 @@ function getProducts(category) {
       {
         id: 3,
         title: 'Flash',
-        price: '$350',
+        price: 350,
         stock: 5,
         category: 'superheroes',
         imageUrl: 'https://www.ecccomics.com/content/productos/5447/Flash_28.jpg'
@@ -41,9 +40,6 @@ function getProducts(category) {
 }
 
 function ItemListContainer({ greeting }) {
-  // function dummy() {
-  //   console.log('dummy prop function');
-  // }
   const [products, setProducts] = useState([]);
   const { categoryId } = useParams();
 
